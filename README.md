@@ -1,6 +1,6 @@
 # Hi there! I'm Joseph
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=0078D4&center=true&vCenter=true&width=600&lines=Hey%2C+I%27m+Joseph+%2F+hazedxz;Systems+Developer+%7C+20+y%2Fo;C%2B%2B+%7C+Rust+%7C+C+%7C+Python;Building+LiquidDock+%26+FlipNotify" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=hazedxz&fontSize=60&fontColor=fff&animation=twinkling&fontAlignY=35&desc=Systems%20Developer%20%7C%20C%2B%2B%20%7C%20Rust%20%7C%20Windows&descAlignY=55&descSize=16" width="100%"/>
 
 ## About Me
 20-year-old developer passionate about systems programming, desktop software, and crafting polished user experiences. I love pushing the limits of what native applications can look and feel like.
