@@ -1,6 +1,6 @@
 # Hi there! I'm Joseph
 
-![Skills](https://skillicons.dev/icons?i=cpp,c,rust,python,js,html,css,git,linux,lua,,ps1&theme=dark&perline=9)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=800&height=80&lines=Systems+Developer;C%2B%2B+%7C+Rust+%7C+Windows;Building+polished+native+apps)](https://git.io/typing-svg)
 
 ## About Me
 20-year-old developer passionate about systems programming, desktop software, and crafting polished user experiences. I love pushing the limits of what native applications can look and feel like.
