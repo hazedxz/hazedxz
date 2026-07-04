@@ -1,6 +1,6 @@
 # Hi there! I'm Joseph
 
-![Skills](https://skillicons.dev/icons?i=cpp,c,rust,python,js,html,css,git,linux&theme=dark&perline=9)
+![Skills](https://skillicons.dev/icons?i=cpp,c,rust,python,js,html,css,git,linux,lua,,ps1&theme=dark&perline=9)
 
 ## About Me
 20-year-old developer passionate about systems programming, desktop software, and crafting polished user experiences. I love pushing the limits of what native applications can look and feel like.
