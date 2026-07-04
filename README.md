@@ -1,6 +1,6 @@
 # Hi there! I'm Joseph
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=hazedxz&fontSize=60&fontColor=fff&animation=twinkling&fontAlignY=35&desc=Systems%20Developer%20%7C%20C%2B%2B%20%7C%20Rust%20%7C%20Windows&descAlignY=55&descSize=16" width="100%"/>
+![Skills](https://skillicons.dev/icons?i=cpp,c,rust,python,js,html,css,git,linux&theme=dark&perline=9)
 
 ## About Me
 20-year-old developer passionate about systems programming, desktop software, and crafting polished user experiences. I love pushing the limits of what native applications can look and feel like.
