@@ -1,0 +1,153 @@
+<svg width="100%" viewBox="0 0 900 300" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>Retro synthwave banner</title>
+  <desc>Animated synthwave banner with perspective grid, neon sun, and scanlines</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#050010"/>
+      <stop offset="45%" stop-color="#130030"/>
+      <stop offset="80%" stop-color="#220055"/>
+      <stop offset="100%" stop-color="#0a0020"/>
+    </linearGradient>
+    <linearGradient id="sun_grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff6ec7"/>
+      <stop offset="35%" stop-color="#ff9500"/>
+      <stop offset="100%" stop-color="#ff3300"/>
+    </linearGradient>
+    <linearGradient id="ground_grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d0028"/>
+      <stop offset="100%" stop-color="#000005"/>
+    </linearGradient>
+    <linearGradient id="horizon_glow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff00ff" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#ff00ff" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.8"/>
+      <stop offset="70%" stop-color="#00ffff" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#00ffff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="fade_left" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff00ff" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#ff00ff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="fade_right" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00ffff" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#00ffff" stop-opacity="0.5"/>
+    </linearGradient>
+    <clipPath id="clip">
+      <rect width="900" height="300"/>
+    </clipPath>
+    <style>
+      @keyframes grid_scroll {
+        from { transform: translateY(0px); }
+        to   { transform: translateY(50px); }
+      }
+      @keyframes sun_stripe_scroll {
+        from { transform: translateY(0px); }
+        to   { transform: translateY(17px); }
+      }
+      @keyframes twinkle_a { 0%,100%{opacity:0.9} 50%{opacity:0.15} }
+      @keyframes twinkle_b { 0%,100%{opacity:0.5} 50%{opacity:0.05} }
+      @keyframes scanline_move {
+        0%   { transform: translateY(-10px); opacity: 0.06; }
+        50%  { opacity: 0.03; }
+        100% { transform: translateY(310px); opacity: 0.06; }
+      }
+      @keyframes flicker {
+        0%,100%{opacity:1} 92%{opacity:1} 93%{opacity:0.85} 94%{opacity:1}
+      }
+      .grid_anim   { animation: grid_scroll 1.4s linear infinite; }
+      .stripe_anim { animation: sun_stripe_scroll 0.9s steps(1) infinite; }
+      .tw_a { animation: twinkle_a 2.2s ease-in-out infinite; }
+      .tw_b { animation: twinkle_b 3.5s ease-in-out infinite; }
+      .tw_c { animation: twinkle_a 1.8s ease-in-out infinite; }
+      .tw_d { animation: twinkle_b 2.9s ease-in-out infinite; }
+      .scanline { animation: scanline_move 5s linear infinite; }
+      .flicker  { animation: flicker 8s linear infinite; }
+    </style>
+  </defs>
+
+  <g clip-path="url(#clip)">
+
+    <!-- Sky background -->
+    <rect width="900" height="300" fill="url(#sky)"/>
+
+    <!-- Stars -->
+    <circle cx="55"  cy="22"  r="1"   fill="#fff" class="tw_a"/>
+    <circle cx="130" cy="14"  r="1.5" fill="#fff" class="tw_b"/>
+    <circle cx="210" cy="48"  r="1"   fill="#fff" class="tw_c"/>
+    <circle cx="290" cy="18"  r="1"   fill="#fff" class="tw_a"/>
+    <circle cx="370" cy="35"  r="1.5" fill="#fff" class="tw_d"/>
+    <circle cx="450" cy="10"  r="1"   fill="#fff" class="tw_b"/>
+    <circle cx="520" cy="55"  r="1"   fill="#fff" class="tw_c"/>
+    <circle cx="600" cy="28"  r="1.5" fill="#fff" class="tw_a"/>
+    <circle cx="670" cy="16"  r="1"   fill="#fff" class="tw_d"/>
+    <circle cx="750" cy="44"  r="1"   fill="#fff" class="tw_b"/>
+    <circle cx="820" cy="22"  r="1.5" fill="#fff" class="tw_c"/>
+    <circle cx="870" cy="60"  r="1"   fill="#fff" class="tw_a"/>
+    <circle cx="95"  cy="68"  r="1"   fill="#ff88ff" class="tw_b" opacity="0.7"/>
+    <circle cx="780" cy="50"  r="1"   fill="#88ffff" class="tw_c" opacity="0.7"/>
+    <circle cx="340" cy="62"  r="1"   fill="#fff" class="tw_d"/>
+    <circle cx="480" cy="72"  r="1"   fill="#ff88ff" class="tw_a" opacity="0.6"/>
+    <circle cx="160" cy="38"  r="1"   fill="#fff" class="tw_c"/>
+    <circle cx="700" cy="70"  r="1"   fill="#fff" class="tw_b"/>
+
+    <!-- Sun -->
+    <circle cx="450" cy="168" r="70" fill="url(#sun_grad)" class="flicker"/>
+
+    <!-- Sun scanline stripes -->
+    <g class="stripe_anim">
+      <rect x="380" y="176" width="140" height="6"  fill="#0a0018"/>
+      <rect x="380" y="188" width="140" height="5"  fill="#0a0018"/>
+      <rect x="380" y="199" width="140" height="5"  fill="#0a0018"/>
+      <rect x="380" y="209" width="140" height="4"  fill="#0a0018"/>
+      <rect x="380" y="218" width="140" height="4"  fill="#0a0018"/>
+      <rect x="380" y="226" width="140" height="3"  fill="#0a0018"/>
+      <rect x="380" y="232" width="140" height="3"  fill="#0a0018"/>
+    </g>
+
+    <!-- Sun ambient glow -->
+    <ellipse cx="450" cy="170" rx="78" ry="12" fill="#ff00cc" opacity="0.12"/>
+    <ellipse cx="450" cy="170" rx="100" ry="18" fill="#ff0088" opacity="0.06"/>
+
+    <!-- Ground -->
+    <rect x="0" y="168" width="900" height="132" fill="url(#ground_grad)"/>
+
+    <!-- Perspective grid (animated) -->
+    <g class="grid_anim">
+      <!-- Vertical lines converging to horizon point 450,168 -->
+      <line x1="450" y1="168" x2="0"   y2="300" stroke="#ff00ff" stroke-width="0.7" opacity="0.55"/>
+      <line x1="450" y1="168" x2="90"  y2="300" stroke="#ff00ff" stroke-width="0.6" opacity="0.45"/>
+      <line x1="450" y1="168" x2="180" y2="300" stroke="#ff00ff" stroke-width="0.6" opacity="0.4"/>
+      <line x1="450" y1="168" x2="270" y2="300" stroke="#ff00ff" stroke-width="0.5" opacity="0.38"/>
+      <line x1="450" y1="168" x2="360" y2="300" stroke="#ff00ff" stroke-width="0.5" opacity="0.35"/>
+      <line x1="450" y1="168" x2="450" y2="300" stroke="#ff00ff" stroke-width="0.7" opacity="0.55"/>
+      <line x1="450" y1="168" x2="540" y2="300" stroke="#ff00ff" stroke-width="0.5" opacity="0.35"/>
+      <line x1="450" y1="168" x2="630" y2="300" stroke="#ff00ff" stroke-width="0.5" opacity="0.38"/>
+      <line x1="450" y1="168" x2="720" y2="300" stroke="#ff00ff" stroke-width="0.6" opacity="0.4"/>
+      <line x1="450" y1="168" x2="810" y2="300" stroke="#ff00ff" stroke-width="0.6" opacity="0.45"/>
+      <line x1="450" y1="168" x2="900" y2="300" stroke="#ff00ff" stroke-width="0.7" opacity="0.55"/>
+
+      <!-- Horizontal lines -->
+      <line x1="0" y1="180" x2="900" y2="180" stroke="#ff00ff" stroke-width="0.5" opacity="0.45"/>
+      <line x1="0" y1="195" x2="900" y2="195" stroke="#ff00ff" stroke-width="0.5" opacity="0.4"/>
+      <line x1="0" y1="212" x2="900" y2="212" stroke="#ff00ff" stroke-width="0.5" opacity="0.35"/>
+      <line x1="0" y1="232" x2="900" y2="232" stroke="#ff00ff" stroke-width="0.5" opacity="0.28"/>
+      <line x1="0" y1="256" x2="900" y2="256" stroke="#ff00ff" stroke-width="0.5" opacity="0.22"/>
+      <line x1="0" y1="284" x2="900" y2="284" stroke="#ff00ff" stroke-width="0.5" opacity="0.16"/>
+    </g>
+
+    <!-- Horizon glow line -->
+    <rect x="0" y="166" width="900" height="2" fill="url(#horizon_glow)"/>
+
+    <!-- Side accent glows -->
+    <rect x="0"   y="160" width="250" height="2" fill="url(#fade_left)"  opacity="0.8"/>
+    <rect x="650" y="160" width="250" height="2" fill="url(#fade_right)" opacity="0.8"/>
+
+    <!-- Scanline sweep -->
+    <rect width="900" height="4" fill="#ffffff" opacity="0.05" class="scanline"/>
+
+    <!-- Outer border neon -->
+    <rect x="0" y="0" width="900" height="300" fill="none" stroke="#ff00ff" stroke-width="1.2" opacity="0.35"/>
+    <rect x="2" y="2" width="896" height="296" fill="none" stroke="#00ffff" stroke-width="0.4" opacity="0.2"/>
+
+  </g>
+</svg>
