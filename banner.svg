@@ -1,153 +1,311 @@
-<svg width="100%" viewBox="0 0 900 300" role="img" xmlns="http://www.w3.org/2000/svg">
-  <title>Retro synthwave banner</title>
-  <desc>Animated synthwave banner with perspective grid, neon sun, and scanlines</desc>
+<svg width="100%" viewBox="0 0 900 280" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>Japanese retro lo-fi banner</title>
+  <desc>Animated Japanese retro aesthetic banner — torii gate, sakura petals, moon, lo-fi pastel palette</desc>
   <defs>
+
     <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#050010"/>
-      <stop offset="45%" stop-color="#130030"/>
-      <stop offset="80%" stop-color="#220055"/>
-      <stop offset="100%" stop-color="#0a0020"/>
+      <stop offset="0%"   stop-color="#1a0828"/>
+      <stop offset="25%"  stop-color="#2d1040"/>
+      <stop offset="55%"  stop-color="#4a1a55"/>
+      <stop offset="80%"  stop-color="#7a2060"/>
+      <stop offset="100%" stop-color="#a03060"/>
     </linearGradient>
-    <linearGradient id="sun_grad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff6ec7"/>
-      <stop offset="35%" stop-color="#ff9500"/>
-      <stop offset="100%" stop-color="#ff3300"/>
+
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#1a0828"/>
+      <stop offset="100%" stop-color="#0d0418"/>
     </linearGradient>
-    <linearGradient id="ground_grad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#0d0028"/>
-      <stop offset="100%" stop-color="#000005"/>
+
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#2a1045"/>
+      <stop offset="100%" stop-color="#150828"/>
     </linearGradient>
-    <linearGradient id="horizon_glow" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#ff00ff" stop-opacity="0"/>
-      <stop offset="30%" stop-color="#ff00ff" stop-opacity="0.6"/>
-      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.8"/>
-      <stop offset="70%" stop-color="#00ffff" stop-opacity="0.6"/>
-      <stop offset="100%" stop-color="#00ffff" stop-opacity="0"/>
+
+    <linearGradient id="moon_grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#fff5f0"/>
+      <stop offset="100%" stop-color="#ffd0e8"/>
     </linearGradient>
-    <linearGradient id="fade_left" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#ff00ff" stop-opacity="0.5"/>
-      <stop offset="100%" stop-color="#ff00ff" stop-opacity="0"/>
+
+    <linearGradient id="torii_grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#cc2244"/>
+      <stop offset="100%" stop-color="#991133"/>
     </linearGradient>
-    <linearGradient id="fade_right" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#00ffff" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#00ffff" stop-opacity="0.5"/>
+
+    <linearGradient id="mountain_far" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#5a1a60"/>
+      <stop offset="100%" stop-color="#2d0d35"/>
     </linearGradient>
+
+    <linearGradient id="mountain_mid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#3d1248"/>
+      <stop offset="100%" stop-color="#1a0828"/>
+    </linearGradient>
+
+    <linearGradient id="fog" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#ffd0e8" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#ffd0e8" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="moon_reflect" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#ffd0e8" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#ffd0e8" stop-opacity="0"/>
+    </linearGradient>
+
     <clipPath id="clip">
-      <rect width="900" height="300"/>
+      <rect width="900" height="280"/>
     </clipPath>
+
     <style>
-      @keyframes grid_scroll {
-        from { transform: translateY(0px); }
-        to   { transform: translateY(50px); }
+      @keyframes petal1 {
+        0%   { transform: translate(0,0)   rotate(0deg);   opacity: 0; }
+        5%   { opacity: 0.85; }
+        100% { transform: translate(-120px,280px) rotate(380deg); opacity: 0; }
       }
-      @keyframes sun_stripe_scroll {
-        from { transform: translateY(0px); }
-        to   { transform: translateY(17px); }
+      @keyframes petal2 {
+        0%   { transform: translate(0,0)   rotate(0deg);   opacity: 0; }
+        8%   { opacity: 0.75; }
+        100% { transform: translate(-80px,280px) rotate(-290deg); opacity: 0; }
       }
-      @keyframes twinkle_a { 0%,100%{opacity:0.9} 50%{opacity:0.15} }
-      @keyframes twinkle_b { 0%,100%{opacity:0.5} 50%{opacity:0.05} }
-      @keyframes scanline_move {
-        0%   { transform: translateY(-10px); opacity: 0.06; }
-        50%  { opacity: 0.03; }
-        100% { transform: translateY(310px); opacity: 0.06; }
+      @keyframes petal3 {
+        0%   { transform: translate(0,0)  rotate(0deg);   opacity: 0; }
+        6%   { opacity: 0.9; }
+        100% { transform: translate(60px,280px) rotate(420deg); opacity: 0; }
       }
-      @keyframes flicker {
-        0%,100%{opacity:1} 92%{opacity:1} 93%{opacity:0.85} 94%{opacity:1}
+      @keyframes petal4 {
+        0%   { transform: translate(0,0)   rotate(0deg);   opacity: 0; }
+        5%   { opacity: 0.7; }
+        100% { transform: translate(-50px,280px) rotate(-310deg); opacity: 0; }
       }
-      .grid_anim   { animation: grid_scroll 1.4s linear infinite; }
-      .stripe_anim { animation: sun_stripe_scroll 0.9s steps(1) infinite; }
-      .tw_a { animation: twinkle_a 2.2s ease-in-out infinite; }
-      .tw_b { animation: twinkle_b 3.5s ease-in-out infinite; }
-      .tw_c { animation: twinkle_a 1.8s ease-in-out infinite; }
-      .tw_d { animation: twinkle_b 2.9s ease-in-out infinite; }
-      .scanline { animation: scanline_move 5s linear infinite; }
-      .flicker  { animation: flicker 8s linear infinite; }
+      @keyframes water_shimmer {
+        0%,100% { opacity: 0.18; }
+        50%     { opacity: 0.08; }
+      }
+      @keyframes moon_glow {
+        0%,100% { opacity: 0.25; }
+        50%     { opacity: 0.12; }
+      }
+      @keyframes fog_drift {
+        0%   { transform: translateX(0); opacity: 1; }
+        50%  { opacity: 0.7; }
+        100% { transform: translateX(60px); opacity: 1; }
+      }
+      @keyframes fog_drift2 {
+        0%   { transform: translateX(0); opacity: 1; }
+        50%  { opacity: 0.5; }
+        100% { transform: translateX(-50px); opacity: 1; }
+      }
+      @keyframes tw { 0%,100%{opacity:0.9} 50%{opacity:0.2} }
+      @keyframes tw2 { 0%,100%{opacity:0.6} 50%{opacity:0.05} }
+      @keyframes lantern_sway {
+        0%,100% { transform: rotate(-3deg); }
+        50%     { transform: rotate(3deg); }
+      }
+      @keyframes lantern_glow {
+        0%,100% { opacity: 0.5; }
+        50%     { opacity: 0.2; }
+      }
+      @keyframes scanline {
+        0%   { transform: translateY(-4px);  }
+        100% { transform: translateY(284px); }
+      }
+      @keyframes reflect_ripple {
+        0%,100% { transform: scaleX(1);   opacity: 0.4; }
+        50%     { transform: scaleX(0.96); opacity: 0.2; }
+      }
+
+      .p1a { animation: petal1 9s  linear infinite 0s; }
+      .p1b { animation: petal1 9s  linear infinite 3s; }
+      .p2a { animation: petal2 11s linear infinite 1s; }
+      .p2b { animation: petal2 11s linear infinite 6s; }
+      .p3a { animation: petal3 8s  linear infinite 2s; }
+      .p3b { animation: petal3 8s  linear infinite 7s; }
+      .p4a { animation: petal4 13s linear infinite 4s; }
+      .p4b { animation: petal4 13s linear infinite 9s; }
+      .p4c { animation: petal1 10s linear infinite 5s; }
+      .p4d { animation: petal2 12s linear infinite 8s; }
+      .p4e { animation: petal3 7s  linear infinite 1.5s; }
+
+      .water  { animation: water_shimmer 3s ease-in-out infinite; }
+      .moon_g { animation: moon_glow 5s ease-in-out infinite; }
+      .fog1   { animation: fog_drift  12s ease-in-out infinite; }
+      .fog2   { animation: fog_drift2 15s ease-in-out infinite 3s; }
+      .star1  { animation: tw  2.2s ease-in-out infinite; }
+      .star2  { animation: tw2 3.1s ease-in-out infinite; }
+      .star3  { animation: tw  1.8s ease-in-out infinite 0.5s; }
+      .star4  { animation: tw2 2.7s ease-in-out infinite 1s; }
+      .lantern_body { animation: lantern_sway 4s ease-in-out infinite; transform-origin: 450px 92px; }
+      .lantern_light { animation: lantern_glow 4s ease-in-out infinite; }
+      .scan   { animation: scanline 7s linear infinite; opacity: 0.03; }
+      .reflect { animation: reflect_ripple 4s ease-in-out infinite; }
     </style>
   </defs>
 
   <g clip-path="url(#clip)">
 
-    <!-- Sky background -->
-    <rect width="900" height="300" fill="url(#sky)"/>
+    <!-- Sky -->
+    <rect width="900" height="280" fill="url(#sky)"/>
 
     <!-- Stars -->
-    <circle cx="55"  cy="22"  r="1"   fill="#fff" class="tw_a"/>
-    <circle cx="130" cy="14"  r="1.5" fill="#fff" class="tw_b"/>
-    <circle cx="210" cy="48"  r="1"   fill="#fff" class="tw_c"/>
-    <circle cx="290" cy="18"  r="1"   fill="#fff" class="tw_a"/>
-    <circle cx="370" cy="35"  r="1.5" fill="#fff" class="tw_d"/>
-    <circle cx="450" cy="10"  r="1"   fill="#fff" class="tw_b"/>
-    <circle cx="520" cy="55"  r="1"   fill="#fff" class="tw_c"/>
-    <circle cx="600" cy="28"  r="1.5" fill="#fff" class="tw_a"/>
-    <circle cx="670" cy="16"  r="1"   fill="#fff" class="tw_d"/>
-    <circle cx="750" cy="44"  r="1"   fill="#fff" class="tw_b"/>
-    <circle cx="820" cy="22"  r="1.5" fill="#fff" class="tw_c"/>
-    <circle cx="870" cy="60"  r="1"   fill="#fff" class="tw_a"/>
-    <circle cx="95"  cy="68"  r="1"   fill="#ff88ff" class="tw_b" opacity="0.7"/>
-    <circle cx="780" cy="50"  r="1"   fill="#88ffff" class="tw_c" opacity="0.7"/>
-    <circle cx="340" cy="62"  r="1"   fill="#fff" class="tw_d"/>
-    <circle cx="480" cy="72"  r="1"   fill="#ff88ff" class="tw_a" opacity="0.6"/>
-    <circle cx="160" cy="38"  r="1"   fill="#fff" class="tw_c"/>
-    <circle cx="700" cy="70"  r="1"   fill="#fff" class="tw_b"/>
+    <circle cx="40"  cy="20"  r="1"   fill="#ffd0e8" class="star1"/>
+    <circle cx="110" cy="12"  r="1.2" fill="#fff5f0" class="star2"/>
+    <circle cx="195" cy="35"  r="0.8" fill="#ffd0e8" class="star3"/>
+    <circle cx="270" cy="18"  r="1"   fill="#fff5f0" class="star4"/>
+    <circle cx="355" cy="48"  r="0.8" fill="#ffd0e8" class="star1"/>
+    <circle cx="580" cy="22"  r="1"   fill="#fff5f0" class="star3"/>
+    <circle cx="650" cy="14"  r="1.2" fill="#ffd0e8" class="star2"/>
+    <circle cx="720" cy="42"  r="0.8" fill="#fff5f0" class="star4"/>
+    <circle cx="800" cy="20"  r="1"   fill="#ffd0e8" class="star1"/>
+    <circle cx="860" cy="55"  r="0.8" fill="#fff5f0" class="star3"/>
+    <circle cx="75"  cy="62"  r="0.8" fill="#ffd0e8" class="star2"/>
+    <circle cx="840" cy="38"  r="1"   fill="#ffd0e8" class="star4"/>
+    <circle cx="490" cy="16"  r="0.8" fill="#fff5f0" class="star1"/>
 
-    <!-- Sun -->
-    <circle cx="450" cy="168" r="70" fill="url(#sun_grad)" class="flicker"/>
+    <!-- Moon glow aura -->
+    <circle cx="175" cy="68" r="52" fill="#ffd0e8" opacity="0.08" class="moon_g"/>
+    <circle cx="175" cy="68" r="40" fill="#ffd0e8" opacity="0.12" class="moon_g"/>
 
-    <!-- Sun scanline stripes -->
-    <g class="stripe_anim">
-      <rect x="380" y="176" width="140" height="6"  fill="#0a0018"/>
-      <rect x="380" y="188" width="140" height="5"  fill="#0a0018"/>
-      <rect x="380" y="199" width="140" height="5"  fill="#0a0018"/>
-      <rect x="380" y="209" width="140" height="4"  fill="#0a0018"/>
-      <rect x="380" y="218" width="140" height="4"  fill="#0a0018"/>
-      <rect x="380" y="226" width="140" height="3"  fill="#0a0018"/>
-      <rect x="380" y="232" width="140" height="3"  fill="#0a0018"/>
+    <!-- Moon -->
+    <circle cx="175" cy="68" r="32" fill="url(#moon_grad)"/>
+    <!-- Moon texture — subtle craters -->
+    <circle cx="162" cy="58" r="5"  fill="#ffc0d8" opacity="0.3"/>
+    <circle cx="180" cy="75" r="3"  fill="#ffc0d8" opacity="0.2"/>
+    <circle cx="190" cy="55" r="4"  fill="#ffc0d8" opacity="0.25"/>
+
+    <!-- Far mountains -->
+    <polygon points="0,160 80,105 160,140 240,95 330,125 420,100 500,130 580,105 660,128 740,98 820,118 900,105 900,175 0,175" fill="url(#mountain_far)" opacity="0.9"/>
+
+    <!-- Mid mountains -->
+    <polygon points="0,175 70,140 150,162 230,132 320,155 420,138 500,160 600,135 700,158 790,140 870,155 900,148 900,185 0,185" fill="url(#mountain_mid)" opacity="0.95"/>
+
+    <!-- Ground/water base -->
+    <rect x="0" y="185" width="900" height="95" fill="url(#ground)"/>
+
+    <!-- Water surface -->
+    <rect x="0" y="200" width="900" height="80" fill="url(#water)" opacity="0.85"/>
+
+    <!-- Water horizontal shimmer lines -->
+    <g class="water">
+      <line x1="0" y1="210" x2="900" y2="210" stroke="#ffd0e8" stroke-width="0.5" opacity="0.3"/>
+      <line x1="0" y1="220" x2="900" y2="220" stroke="#ffd0e8" stroke-width="0.4" opacity="0.22"/>
+      <line x1="0" y1="230" x2="900" y2="230" stroke="#ffd0e8" stroke-width="0.5" opacity="0.18"/>
+      <line x1="0" y1="242" x2="900" y2="242" stroke="#ffd0e8" stroke-width="0.4" opacity="0.14"/>
+      <line x1="0" y1="256" x2="900" y2="256" stroke="#ffd0e8" stroke-width="0.5" opacity="0.1"/>
+      <line x1="0" y1="270" x2="900" y2="270" stroke="#ffd0e8" stroke-width="0.4" opacity="0.07"/>
     </g>
 
-    <!-- Sun ambient glow -->
-    <ellipse cx="450" cy="170" rx="78" ry="12" fill="#ff00cc" opacity="0.12"/>
-    <ellipse cx="450" cy="170" rx="100" ry="18" fill="#ff0088" opacity="0.06"/>
+    <!-- Moon reflection in water -->
+    <ellipse cx="175" cy="228" rx="28" ry="8" fill="url(#moon_reflect)" class="reflect"/>
+    <ellipse cx="175" cy="242" rx="20" ry="5" fill="#ffd0e8" opacity="0.15" class="reflect"/>
 
-    <!-- Ground -->
-    <rect x="0" y="168" width="900" height="132" fill="url(#ground_grad)"/>
-
-    <!-- Perspective grid (animated) -->
-    <g class="grid_anim">
-      <!-- Vertical lines converging to horizon point 450,168 -->
-      <line x1="450" y1="168" x2="0"   y2="300" stroke="#ff00ff" stroke-width="0.7" opacity="0.55"/>
-      <line x1="450" y1="168" x2="90"  y2="300" stroke="#ff00ff" stroke-width="0.6" opacity="0.45"/>
-      <line x1="450" y1="168" x2="180" y2="300" stroke="#ff00ff" stroke-width="0.6" opacity="0.4"/>
-      <line x1="450" y1="168" x2="270" y2="300" stroke="#ff00ff" stroke-width="0.5" opacity="0.38"/>
-      <line x1="450" y1="168" x2="360" y2="300" stroke="#ff00ff" stroke-width="0.5" opacity="0.35"/>
-      <line x1="450" y1="168" x2="450" y2="300" stroke="#ff00ff" stroke-width="0.7" opacity="0.55"/>
-      <line x1="450" y1="168" x2="540" y2="300" stroke="#ff00ff" stroke-width="0.5" opacity="0.35"/>
-      <line x1="450" y1="168" x2="630" y2="300" stroke="#ff00ff" stroke-width="0.5" opacity="0.38"/>
-      <line x1="450" y1="168" x2="720" y2="300" stroke="#ff00ff" stroke-width="0.6" opacity="0.4"/>
-      <line x1="450" y1="168" x2="810" y2="300" stroke="#ff00ff" stroke-width="0.6" opacity="0.45"/>
-      <line x1="450" y1="168" x2="900" y2="300" stroke="#ff00ff" stroke-width="0.7" opacity="0.55"/>
-
-      <!-- Horizontal lines -->
-      <line x1="0" y1="180" x2="900" y2="180" stroke="#ff00ff" stroke-width="0.5" opacity="0.45"/>
-      <line x1="0" y1="195" x2="900" y2="195" stroke="#ff00ff" stroke-width="0.5" opacity="0.4"/>
-      <line x1="0" y1="212" x2="900" y2="212" stroke="#ff00ff" stroke-width="0.5" opacity="0.35"/>
-      <line x1="0" y1="232" x2="900" y2="232" stroke="#ff00ff" stroke-width="0.5" opacity="0.28"/>
-      <line x1="0" y1="256" x2="900" y2="256" stroke="#ff00ff" stroke-width="0.5" opacity="0.22"/>
-      <line x1="0" y1="284" x2="900" y2="284" stroke="#ff00ff" stroke-width="0.5" opacity="0.16"/>
+    <!-- Fog layers -->
+    <g class="fog1">
+      <ellipse cx="300" cy="185" rx="320" ry="22" fill="url(#fog)" opacity="0.9"/>
+    </g>
+    <g class="fog2">
+      <ellipse cx="620" cy="192" rx="280" ry="18" fill="url(#fog)" opacity="0.7"/>
     </g>
 
-    <!-- Horizon glow line -->
-    <rect x="0" y="166" width="900" height="2" fill="url(#horizon_glow)"/>
+    <!-- Torii gate -->
+    <!-- Pillars -->
+    <rect x="412" y="110" width="18" height="90" fill="url(#torii_grad)"/>
+    <rect x="470" y="110" width="18" height="90" fill="url(#torii_grad)"/>
+    <!-- Kasagi (top beam) — curved with path -->
+    <path d="M395,118 Q450,100 505,118" fill="none" stroke="#cc2244" stroke-width="16" stroke-linecap="round"/>
+    <!-- Nuki (middle beam) -->
+    <rect x="408" y="138" width="84" height="10" rx="2" fill="#bb1133"/>
+    <!-- Shimaki (under top beam) -->
+    <rect x="408" y="122" width="84" height="8"  rx="1" fill="#aa1122"/>
+    <!-- Komainu base plates -->
+    <rect x="406" y="196" width="26" height="6" rx="2" fill="#991133"/>
+    <rect x="468" y="196" width="26" height="6" rx="2" fill="#991133"/>
+    <!-- Torii shadow in water -->
+    <rect x="412" y="202" width="18" height="60" fill="#cc2244" opacity="0.12"/>
+    <rect x="470" y="202" width="18" height="60" fill="#cc2244" opacity="0.12"/>
+    <path d="M395,202 Q450,208 505,202" fill="none" stroke="#cc2244" stroke-width="8" opacity="0.15"/>
 
-    <!-- Side accent glows -->
-    <rect x="0"   y="160" width="250" height="2" fill="url(#fade_left)"  opacity="0.8"/>
-    <rect x="650" y="160" width="250" height="2" fill="url(#fade_right)" opacity="0.8"/>
+    <!-- Lantern hanging from torii -->
+    <g class="lantern_body">
+      <!-- String -->
+      <line x1="450" y1="110" x2="450" y2="132" stroke="#ffd0c0" stroke-width="0.8" opacity="0.7"/>
+      <!-- Lantern body -->
+      <rect x="438" y="132" width="24" height="32" rx="4" fill="#cc2244"/>
+      <rect x="441" y="135" width="18" height="26" rx="3" fill="#ff8870" opacity="0.6"/>
+      <!-- Lantern top/bottom caps -->
+      <rect x="436" y="130" width="28" height="5" rx="2" fill="#991133"/>
+      <rect x="436" y="162" width="28" height="5" rx="2" fill="#991133"/>
+      <!-- Lantern tassel -->
+      <line x1="450" y1="167" x2="448" y2="178" stroke="#ffd0c0" stroke-width="1" opacity="0.7"/>
+      <line x1="450" y1="167" x2="452" y2="178" stroke="#ffd0c0" stroke-width="1" opacity="0.7"/>
+    </g>
+    <!-- Lantern glow -->
+    <ellipse cx="450" cy="148" rx="22" ry="20" fill="#ff8870" opacity="0.12" class="lantern_light"/>
+    <ellipse cx="450" cy="148" rx="40" ry="35" fill="#ff6655" opacity="0.05" class="lantern_light"/>
 
-    <!-- Scanline sweep -->
-    <rect width="900" height="4" fill="#ffffff" opacity="0.05" class="scanline"/>
+    <!-- Sakura trees left -->
+    <!-- Trunk -->
+    <rect x="68" y="148" width="8"  height="42" rx="3" fill="#4a1828"/>
+    <rect x="105" y="155" width="6" height="35" rx="3" fill="#4a1828"/>
+    <!-- Branches -->
+    <line x1="72"  y1="158" x2="45"  y2="140" stroke="#4a1828" stroke-width="3" stroke-linecap="round"/>
+    <line x1="72"  y1="162" x2="100" y2="148" stroke="#4a1828" stroke-width="3" stroke-linecap="round"/>
+    <line x1="108" y1="162" x2="88"  y2="150" stroke="#4a1828" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="108" y1="165" x2="130" y2="155" stroke="#4a1828" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Blossoms left -->
+    <ellipse cx="50"  cy="132" rx="28" ry="22" fill="#ffb8cc" opacity="0.85"/>
+    <ellipse cx="75"  cy="125" rx="32" ry="24" fill="#ffc8d8" opacity="0.8"/>
+    <ellipse cx="102" cy="130" rx="26" ry="20" fill="#ffaac0" opacity="0.82"/>
+    <ellipse cx="128" cy="142" rx="22" ry="18" fill="#ffc0d0" opacity="0.78"/>
+    <ellipse cx="55"  cy="145" rx="20" ry="16" fill="#ffd0e0" opacity="0.7"/>
+    <!-- Blossom detail dots -->
+    <circle cx="50"  cy="130" r="3" fill="#ff88a8" opacity="0.6"/>
+    <circle cx="78"  cy="122" r="3" fill="#ff88a8" opacity="0.55"/>
+    <circle cx="104" cy="128" r="2.5" fill="#ff88a8" opacity="0.6"/>
 
-    <!-- Outer border neon -->
-    <rect x="0" y="0" width="900" height="300" fill="none" stroke="#ff00ff" stroke-width="1.2" opacity="0.35"/>
-    <rect x="2" y="2" width="896" height="296" fill="none" stroke="#00ffff" stroke-width="0.4" opacity="0.2"/>
+    <!-- Sakura trees right -->
+    <rect x="824" y="150" width="8"  height="40" rx="3" fill="#4a1828"/>
+    <rect x="790" y="158" width="6"  height="32" rx="3" fill="#4a1828"/>
+    <line x1="828" y1="160" x2="855" y2="145" stroke="#4a1828" stroke-width="3"   stroke-linecap="round"/>
+    <line x1="828" y1="164" x2="800" y2="150" stroke="#4a1828" stroke-width="3"   stroke-linecap="round"/>
+    <line x1="793" y1="165" x2="813" y2="152" stroke="#4a1828" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="793" y1="168" x2="770" y2="158" stroke="#4a1828" stroke-width="2.5" stroke-linecap="round"/>
+    <ellipse cx="852" cy="136" rx="28" ry="22" fill="#ffb8cc" opacity="0.85"/>
+    <ellipse cx="826" cy="128" rx="32" ry="24" fill="#ffc8d8" opacity="0.8"/>
+    <ellipse cx="798" cy="134" rx="26" ry="20" fill="#ffaac0" opacity="0.82"/>
+    <ellipse cx="770" cy="145" rx="22" ry="18" fill="#ffc0d0" opacity="0.78"/>
+    <ellipse cx="846" cy="148" rx="20" ry="16" fill="#ffd0e0" opacity="0.7"/>
+    <circle cx="852" cy="133" r="3"   fill="#ff88a8" opacity="0.6"/>
+    <circle cx="824" cy="126" r="3"   fill="#ff88a8" opacity="0.55"/>
+    <circle cx="796" cy="131" r="2.5" fill="#ff88a8" opacity="0.6"/>
+
+    <!-- Falling sakura petals -->
+    <!-- Each petal is a small ellipse with rotation in CSS transform -->
+    <ellipse cx="200" cy="10" rx="5" ry="3" fill="#ffb8cc" opacity="0.9" class="p1a"/>
+    <ellipse cx="350" cy="5"  rx="4" ry="2.5" fill="#ffd0e0" opacity="0.85" class="p1b"/>
+    <ellipse cx="500" cy="15" rx="5" ry="3" fill="#ffaac0" opacity="0.9" class="p2a"/>
+    <ellipse cx="650" cy="8"  rx="4" ry="2.5" fill="#ffc8d8" opacity="0.8" class="p2b"/>
+    <ellipse cx="750" cy="20" rx="5" ry="3" fill="#ffb8cc" opacity="0.85" class="p3a"/>
+    <ellipse cx="280" cy="12" rx="4" ry="2.5" fill="#ffd0e0" opacity="0.9" class="p3b"/>
+    <ellipse cx="820" cy="6"  rx="5" ry="3" fill="#ffaac0" opacity="0.8" class="p4a"/>
+    <ellipse cx="130" cy="18" rx="4" ry="2.5" fill="#ffc8d8" opacity="0.85" class="p4b"/>
+    <ellipse cx="430" cy="10" rx="5" ry="3" fill="#ffb8cc" opacity="0.9" class="p4c"/>
+    <ellipse cx="570" cy="3"  rx="4" ry="2.5" fill="#ffd0e0" opacity="0.8" class="p4d"/>
+    <ellipse cx="700" cy="14" rx="5" ry="3" fill="#ffaac0" opacity="0.85" class="p4e"/>
+
+    <!-- Scanline -->
+    <rect width="900" height="2" fill="#ffd0e8" class="scan"/>
+
+    <!-- Vignette top -->
+    <rect width="900" height="60" fill="url(#sky)" opacity="0.35"/>
+
+    <!-- Outer border -->
+    <rect x="0" y="0" width="900" height="280" fill="none" stroke="#ffb8cc" stroke-width="1.2" opacity="0.5"/>
+    <rect x="3" y="3" width="894" height="274" fill="none" stroke="#ffd0e8" stroke-width="0.4" opacity="0.3"/>
+
+    <!-- Corner accents -->
+    <polyline points="0,24 0,0 24,0"       fill="none" stroke="#ffb8cc" stroke-width="2" opacity="0.8"/>
+    <polyline points="876,0 900,0 900,24"   fill="none" stroke="#ffb8cc" stroke-width="2" opacity="0.8"/>
+    <polyline points="0,256 0,280 24,280"   fill="none" stroke="#ffb8cc" stroke-width="2" opacity="0.8"/>
+    <polyline points="876,280 900,280 900,256" fill="none" stroke="#ffb8cc" stroke-width="2" opacity="0.8"/>
 
   </g>
 </svg>
