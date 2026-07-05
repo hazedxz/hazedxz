@@ -1,8 +1,6 @@
 # Hi there! I'm Joseph
 
-<div align="center">
-
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=800&height=80&lines=Systems+Developer;C%2B%2B+%7C+Rust+%7C+Windows;Building+polished+native+apps)](https://git.io/typing-svg)
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0a1a,50:1a0a3a,100:0a1a2a&height=200&section=header&text=hazedxz&fontSize=60&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Systems%20Developer%20%7C%20C%2B%2B%20%7C%20Rust%20%7C%20Windows&descAlignY=58&descSize=14&descColor=aaaaff" width="100%"/>
 
 ![Skills](https://skillicons.dev/icons?i=cpp,c,rust,python,js,html,css,git,linux&theme=dark&perline=9)
 
