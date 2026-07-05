@@ -1,6 +1,6 @@
 # Hi there! I'm Joseph
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0d1f3c&height=180&section=header&text=HAZEDXZ&fontSize=52&fontColor=7eb8f5&animation=fadeIn&fontAlign=50&fontAlignY=50&desc=C%2B%2B%20%C2%B7%20Rust%20%C2%B7%20Windows%20%C2%B7%20Desktop&descColor=4a7fa5&descAlignY=70&descSize=15" width="100%"/>
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=30&pause=1000&color=CBA6F7&background=1E1E2E&center=true&vCenter=true&multiline=true&repeat=false&width=700&height=120&lines=hazedxz;Systems+Developer+%7C+C%2B%2B+%7C+Rust)](https://git.io/typing-svg)
 
 ## About Me
 20-year-old developer passionate about systems programming, desktop software, and crafting polished user experiences. I love pushing the limits of what native applications can look and feel like.
