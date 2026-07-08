@@ -64,7 +64,7 @@ mindmap
 
 <div align="center">
 
-[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=hazedxz&theme=transparent&hide_border=true&border_radius=30&locale=en&short_numbers=true)](https://git.io/streak-stats)
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=Sushmitadasari&theme=tokyo-night&hide_border=true&area=true" width="100%"/>
 
 </div>
 
